@@ -5,6 +5,7 @@ include Term::ANSIColor
 aufgaben = {'01' => 'AsciiShop', '02' => 'BarPlot', '03' => 'AsciiShop', '04' => 'AsciiShop', '05' => 'AsciiShop', '06' => 'AsciiShop', '07' => 'AsciiShop', '08' => 'AsciiShop', '09' => 'AsciiShop', '10' => 'AsciiShop'}
 namespace :aufgabe do
   aufgaben.each do |number, programm|
+    desc "compile ##{number}, run with given input and diff against expected output"
     task "#{number}" do
       input = FileList.new("asciishop-A#{number}/Tests/*.i*")
       output = FileList.new("asciishop-A#{number}/Tests/*.o[0-9]")
