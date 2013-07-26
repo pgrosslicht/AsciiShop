@@ -17,7 +17,6 @@ public class AsciiShop {
     for(int i = 1; i < lines; i++) {
       checkIfTrue(sc.hasNextLine());
       current_line = sc.nextLine();
-      checkIfTrue(!current_line.startsWith("fill"));
       checkIfTrue(width == current_line.length());
       image[i] = current_line;
     }
